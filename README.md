@@ -1,4 +1,4 @@
-### WEB ROCKET
+### Recipes on Rails
 > Status: Incomplete ⚠️
 
 <table>
