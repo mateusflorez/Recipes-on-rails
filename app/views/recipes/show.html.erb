@@ -1,0 +1,9 @@
+<h1><%= @recipe.name %></h1>
+<h4>Ingredients:</h4>
+<%= @recipe.stuff %><br>
+<h4>Directions:</h4>
+<%= @recipe.directions %><br>
+<h4>Calories:</h4>
+<%= formata_caloria(@recipe) %><br>
+<h4>Cost:</h4>
+<%= number_to_currency(@recipe.cost) %><br>

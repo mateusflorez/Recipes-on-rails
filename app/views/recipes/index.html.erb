@@ -2,12 +2,13 @@
 
 <ul>
     <% @recipes.each do |recipe| %>
-        <<li>
-        <h4>Recipe:</h4> <br>
+        <li>
+        <h4>Recipe:</h4>
+        <%= recipe.name %><br>
         <h4>Ingredients:</h4>
-        <%= recipe.stuff %><br>
+        <%= truncate(recipe.stuff, length: 30, separator: ' ') %><br>
         <h4>Directions:</h4>
-        <%= recipe.directions %><br>
+        <%= truncate(recipe.directions, length: 30, separator: ' ') %><br>
         <h4>Calories:</h4>
         <%= formata_caloria(recipe) %><br>
         <h4>Cost:</h4>
