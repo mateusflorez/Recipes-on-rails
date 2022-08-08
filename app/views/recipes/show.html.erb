@@ -6,4 +6,5 @@
 <h4>Calories:</h4>
 <%= formata_caloria(@recipe) %><br>
 <h4>Cost:</h4>
-<%= number_to_currency(@recipe.cost) %><br>
+<%= number_to_currency(@recipe.cost) %><br><br>
+<%= link_to "Back", recipes_path %>

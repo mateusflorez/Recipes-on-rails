@@ -4,7 +4,7 @@
     <% @recipes.each do |recipe| %>
         <li>
         <h4>Recipe:</h4>
-        <%= recipe.name %><br>
+        <%= link_to recipe.name, recipe %><br>
         <h4>Ingredients:</h4>
         <%= truncate(recipe.stuff, length: 30, separator: ' ') %><br>
         <h4>Directions:</h4>
