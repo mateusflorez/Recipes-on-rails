@@ -8,4 +8,5 @@
 <h4>Cost:</h4>
 <%= number_to_currency(@recipe.cost) %><br><br>
 <%= link_to "Back", recipes_path %>&nbsp&nbsp
-<%= link_to "Edit", edit_recipe_url(@recipe) %>
+<%= link_to "Edit", edit_recipe_url(@recipe) %>&nbsp&nbsp
+<%= link_to "Delete", recipe_path(@recipe), method: :delete, data:{confirm: "Are you sure?"} %>
