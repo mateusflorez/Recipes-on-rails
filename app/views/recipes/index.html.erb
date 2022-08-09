@@ -3,16 +3,10 @@
 <ul>
     <% @recipes.each do |recipe| %>
         <li>
-        <h4>Recipe:</h4>
-        <%= link_to recipe.name, recipe %><br>
-        <h4>Ingredients:</h4>
-        <%= truncate(recipe.stuff, length: 30, separator: ' ') %><br>
-        <h4>Directions:</h4>
-        <%= truncate(recipe.directions, length: 30, separator: ' ') %><br>
-        <h4>Calories:</h4>
-        <%= formata_caloria(recipe) %><br>
-        <h4>Cost:</h4>
-        <%= number_to_currency(recipe.cost) %><br>
+        <b><%= recipe.kind %></b>
+        <h1><%= link_to recipe.name, recipe %></h1>
+        <%= imagem(recipe) %><br>
+        <%= recipe.preptime.to_formatted_s(:time) %> mins
         </li>
     <% end %>
 </ul>

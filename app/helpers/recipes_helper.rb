@@ -7,4 +7,12 @@ module RecipesHelper
       recipe.calories
     end
   end
+
+  def imagem(recipe)
+    if recipe.poster.blank?
+      image_tag('notfound.png', width: 250)
+    else
+      image_tag(recipe.poster, width: 250)
+    end
+  end
 end
