@@ -16,8 +16,8 @@
         <%= formata_caloria(@recipe) %><br>
         <h4>Cost:</h4>
         <%= number_to_currency(@recipe.cost) %><br><br>
-        <%= link_to "Back", recipes_path %>&nbsp&nbsp
-        <%= link_to "Edit", edit_recipe_url(@recipe) %>&nbsp&nbsp
-        <%= link_to "Delete", recipe_path(@recipe), method: :delete, data:{confirm: "Are you sure?"} %>
+        <%= link_to "Back", recipes_path, class: 'btn btn-secondary' %>&nbsp
+        <%= link_to "Edit", edit_recipe_url(@recipe), class: 'btn btn-primary' %>&nbsp
+        <%= link_to "Delete", recipe_path(@recipe), class: 'btn btn-danger', method: :delete, data:{confirm: "Are you sure?"} %>
     </div>
 </div>
