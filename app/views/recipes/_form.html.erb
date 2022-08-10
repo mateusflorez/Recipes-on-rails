@@ -1,44 +1,44 @@
 <%= form_for(@recipe) do |f| %>
 
-<p>
+<p class="form-group">
     <%= f.label :Name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Ingredients %><br>
-    <%= f.text_area :stuff, cols:20, rows:5 %>
+    <%= f.text_area :stuff, cols:20, rows:5, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Recipe_type %><br>
-    <%= f.text_field :kind %>
+    <%= f.text_field :kind, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Calories %><br>
-    <%= f.number_field :calories %>
+    <%= f.number_field :calories, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Directions %><br>
-    <%= f.text_area :directions, cols:20, rows:5 %>
+    <%= f.text_area :directions, cols:20, rows:5, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Preparation_time %><br>
-    <%= f.time_select :preptime %>
+    <%= f.time_select :preptime, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Serving %><br>
-    <%= f.text_field :portion %>
+    <%= f.text_field :portion, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Cost %><br>
-    <%= f.number_field :cost, step: :any %>
+    <%= f.number_field :cost, step: :any, class:'form-control' %>
 </p>
-<p>
+<p class="form-group">
     <%= f.label :Image %><br>
-    <%= f.text_field :poster, placeholder: ".GIF, .JPEG or .PNG" %>
+    <%= f.text_field :poster, placeholder: ".GIF, .JPEG or .PNG", class:'form-control' %>
 </p>
-<p>
-    <%= f.submit %>
-    <%= link_to "back", :back %>
+<p class="form-group">
+    <%= f.submit class:'btn btn-primary' %>
+    <%= link_to "back", :back, class:'btn btn-secondary' %>
 </p>
 
 <% end %>
