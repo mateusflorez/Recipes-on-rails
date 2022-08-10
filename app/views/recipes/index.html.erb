@@ -1,12 +1,28 @@
-<h1>Recipes</h1>
-<%= link_to "New recipe", new_recipe_path %><br>
-<ul>
+<div class="container pt-4">
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header"><%= pluralize(@recipes.size, 'Recipe', 'Recipes') %>
+            <small class="nova_receita"><%= link_to "New recipe", new_recipe_path %></small>
+            </h1>
+        </div>
+    </div>
+    <hr>
+
     <% @recipes.each do |recipe| %>
-        <li>
-        <b><%= recipe.kind %></b>
-        <h1><%= link_to recipe.name, recipe %></h1>
-        <%= imagem(recipe) %><br>
-        <%= recipe.preptime.to_formatted_s(:time) %> mins
-        </li>
+        <div class="row">
+            <div class="col-md-3 text-center text-lg-end">
+                <%= link_to imagem(recipe), recipe%>
+            </div>
+            <div class="col-md-7">
+                <b><%= recipe.kind %></b>
+                <h3><%= link_to recipe.name, recipe %></h3>
+                <h5>Calories</h5>
+                <%= recipe.calories %>
+                <h5>Preparation time</h5>
+                <%= recipe.preptime.to_formatted_s(:time) %> mins
+            </div>
+        </div>
+        <hr>
     <% end %>
-</ul>
+</div>
