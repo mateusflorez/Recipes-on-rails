@@ -8,7 +8,7 @@ Recipe.create!([
     Ice
 ",
     calories: 60,
-    kind: "Drinks",
+    kind: "Drink",
     directions: " Mix the vodka and vermouth:
 
     Fill a mixing glass or pint glass with ice. Add the vodka and vermouth.
@@ -47,7 +47,7 @@ Strain the drink into the glass, and drop the lemon peel in. Sip and savor! ",
 
 ",
     calories: 215,
-    kind: "Desserts",
+    kind: "Dessert",
     directions: "
     Preheat the grill to medium-high heat, at 400°F:
 
