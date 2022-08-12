@@ -8,6 +8,8 @@ class Recipe < ApplicationRecord
   KIND = %w(Breakfast Lunch Dinner Dessert Appetizers Drink Holidays Vegan)
   validates_inclusion_of :kind, in: KIND
 
+  has_many :comments, dependent: :destroy
+
   def light?
     calories.blank? || calories < 100
   end

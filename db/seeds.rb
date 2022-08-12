@@ -69,3 +69,11 @@ Strain the drink into the glass, and drop the lemon peel in. Sip and savor! ",
     poster: "peach.jpg"
   }
 ])
+
+receita = Recipe.find_by(name: 'Classic Vodka Martini')
+receita.comments.create!(name: 'Raphael Campos', rating: 5, comment: 'Very nice!')
+receita.comments.create!(name: 'Lucas Antonio', rating: 5, comment: 'Amazing')
+receita.comments.create!(name: 'Leonardo Michael', rating: 5, comment: 'Very great!')
+
+receita = Recipe.find_by(name: 'Grilled Peaches')
+receita.comments.create!(name: 'Raphael Campos', rating: 5, comment: 'My current favorite!')
