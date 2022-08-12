@@ -17,7 +17,8 @@
         <h4>Cost:</h4>
         <%= number_to_currency(@recipe.cost) %><br><br>
         <div>
-            <%= link_to pluralize(@recipe.comments.size, 'Comment', 'Comments'), recipe_comments_path(@recipe) %>
+            <%= link_to pluralize(@recipe.comments.size, 'Comment', 'Comments'), recipe_comments_path(@recipe) %>&nbsp
+            <%= link_to 'New comment', new_recipe_comment_path(@recipe), class: 'btn btn-primary' %>
         </div>
     </div>
     <%= link_to "Back", recipes_path, class: 'btn btn-secondary' %>&nbsp
