@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="mt-4 p-5 bg-light rounded">
+    <div class="mt-4 p-5 bg-light rounded mb-4">
         <h1><%= @recipe.name %></h1>
         <%= imagem(@recipe) %>
         <h4>Recipe type:</h4>
@@ -16,8 +16,11 @@
         <%= formata_caloria(@recipe) %><br>
         <h4>Cost:</h4>
         <%= number_to_currency(@recipe.cost) %><br><br>
-        <%= link_to "Back", recipes_path, class: 'btn btn-secondary' %>&nbsp
-        <%= link_to "Edit", edit_recipe_url(@recipe), class: 'btn btn-primary' %>&nbsp
-        <%= link_to "Delete", recipe_path(@recipe), class: 'btn btn-danger', method: :delete, data:{confirm: "Are you sure?"} %>
+        <div>
+            <%= link_to pluralize(@recipe.comments.size, 'Comment', 'Comments'), recipe_comments_path(@recipe) %>
+        </div>
     </div>
+    <%= link_to "Back", recipes_path, class: 'btn btn-secondary' %>&nbsp
+    <%= link_to "Edit", edit_recipe_url(@recipe), class: 'btn btn-primary' %>&nbsp
+    <%= link_to "Delete", recipe_path(@recipe), class: 'btn btn-danger', method: :delete, data:{confirm: "Are you sure?"} %>
 </div>

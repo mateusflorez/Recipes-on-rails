@@ -1,1 +1,8 @@
-
+$font_size:12px;
+.small_font_rating {
+    font-size: $font_size;
+    font-weight: bold;
+}
+.small_font {
+    font-size: $font_size;
+}
