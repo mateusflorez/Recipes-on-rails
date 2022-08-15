@@ -22,6 +22,10 @@
   </tr>
 </table>
 
+## Functionalities:
++ Recipes CRUD
++ Add comments
+
 ## Instalation instructions:
 ```
 #Clone the repository.
